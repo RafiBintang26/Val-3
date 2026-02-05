@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #7b0f12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      position: relative;
+    }
+
+    /* Polaroid */
+    .photo-wrapper {
+      position: relative;
+    }
+
+    .polaroid {
+      background: #fff;
+      padding: 10px 10px 25px;
+      width: 230px;
+      transform: rotate(-5deg);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .polaroid img {
+      width: 100%;
+      display: block;
+    }
+
+    .sticker {
+      position: absolute;
+      font-size: 32px;
+    }
+
+    .sticker.heart { top: -20px; left: -20px; }
+    .sticker.cake { bottom: -10px; left: -20px; }
+    .sticker.bear { bottom: -15px; right: -15px; }
+
+    .caption {
+      position: absolute;
+      bottom: 40px;
+      left: 15px;
+      color: #fff;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Text */
+    .text {
+      max-width: 400px;
+      line-height: 1.6;
+    }
+
+    .text h2 {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .text small {
+      display: block;
+      margin-top: 15px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    /* Arrow */
+    .arrow {
+      position: absolute;
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 28px;
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, 10px); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Photo -->
+  <div class="photo-wrapper">
+    <div class="polaroid">
+      <!-- Ganti src dengan foto kamu -->
+      <img src="foto.jpg" alt="photo">
+    </div>
+
+    <div class="sticker heart">💗💗</div>
+    <div class="sticker cake">🧁</div>
+    <div class="sticker bear">🧸</div>
+
+    <div class="caption">
+    </div>
+  </div>
+
+  <!-- Text -->
+  <div class="text">
+    <h2>Sayang, dinda.</h2>
+    <p>
+      The best group who guessed the most correct answers
+      will be receiving Valentine candies from me!
+    </p>
+    <small>
+      Happy Valentine’s 💕
+    </small>
+  </div>
+
+  <!-- Arrow -->
+  <div class="arrow" onclick="nextPage()">→</div>
+</div>
+
+<script>
+  function nextPage() {
+    alert("Lanjut ke halaman berikutnya 💕");
+    // nanti bisa diganti: window.location.href = "page2.html";
+  }
+</script>
+
+</body>
+</html>
